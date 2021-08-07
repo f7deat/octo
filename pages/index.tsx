@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import React from 'react'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -20,7 +22,9 @@ export default function Home() {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
-
+        <Link href={`${process.env.BACKEND_URL}/contact`}>
+    <a>contact!</a>
+  </Link>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
